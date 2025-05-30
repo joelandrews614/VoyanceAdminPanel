@@ -1,8 +1,5 @@
 package Tests;
 
-import java.time.Duration;
-
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Utils.BaseTest;
@@ -25,7 +22,7 @@ public class DevicesTests extends BaseTest{
 		
 		devicesPage.validateFormFields();
 		
-		Thread.sleep(Duration.ofSeconds(3));
+		Thread.sleep(2500);
 		devicesPage.clickFormCloseButton();
 		
 	}
