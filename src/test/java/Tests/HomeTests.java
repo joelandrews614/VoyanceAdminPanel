@@ -15,7 +15,7 @@ public class HomeTests extends BaseTest{
 		
 		loginPage.login(phoneNumber, password);
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		homePage.validateSideNavBars();
 		

@@ -3,20 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Tests.HomeTests">
-        <methods>
-          <include name="logOut"/>
-          <include name="validateSideNavbars"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- Tests.HomeTests -->
       <class name="Tests.DevicesTests">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="TC_02_Verify_Add_Device_Details_Form"/>
-          <include name="prerequiste"/>
         </methods>
       </class> <!-- Tests.DevicesTests -->
     </classes>

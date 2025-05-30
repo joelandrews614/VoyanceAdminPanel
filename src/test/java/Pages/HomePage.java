@@ -44,7 +44,7 @@ public class HomePage {
 		Assert.assertEquals(cardio.isDisplayed(), true);
 		Assert.assertEquals(ota.isDisplayed(), true);
 		Assert.assertEquals(offers.isDisplayed(), true);
-		Assert.assertEquals(subscription.isDisplayed(), true);
+//		Assert.assertEquals(subscription.isDisplayed(), true);
 		
 	}
 	

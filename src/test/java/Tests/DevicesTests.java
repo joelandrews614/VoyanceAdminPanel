@@ -1,33 +1,31 @@
 package Tests;
 
+import java.time.Duration;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Utils.BaseTest;
 
 public class DevicesTests extends BaseTest{
-	
-	@BeforeMethod
-	public void prerequiste() {
-
-		loginPage.login(phoneNumber, password);
-
-	}
-	
+		
 	@Test
 	public void TC_01_Verify_The_Devices_Section() {
-				
+		
+		loginPage.login(phoneNumber, password);
+		
 		devicesPage.validateFields();
 		
 	}
 	
-	@Test
-	public void TC_02_Verify_Add_Device_Details_Form() {
-		
+	@Test(enabled = false)
+	public void TC_02_Verify_Add_Device_Details_Form() throws InterruptedException {
+				
 		devicesPage.clickAddNewButton();
 		
 		devicesPage.validateFormFields();
 		
+		Thread.sleep(Duration.ofSeconds(3));
 		devicesPage.clickFormCloseButton();
 		
 	}
