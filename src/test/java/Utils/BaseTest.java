@@ -52,5 +52,4 @@ public class BaseTest {
 		if(dri != null)
 			dri.quit();
 	}
-	
 }
