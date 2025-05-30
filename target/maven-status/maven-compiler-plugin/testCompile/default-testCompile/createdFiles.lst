@@ -1,0 +1,8 @@
+Pages\DevicesPage.class
+Tests\HomeTests.class
+Pages\HeadersPage.class
+Pages\LoginPage.class
+Tests\DevicesTests.class
+Utils\BaseTest.class
+Pages\HomePage.class
+Tests\LoginTests.class

@@ -5,12 +5,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Utils.BaseTest;
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
 
 @Epic("Validate the functionalities of Login Page")
 public class LoginTests extends BaseTest{
 		
+	@Description("Validate the Design and WebElements of the Login Page")
 	@Story("Validate the Design and WebElements of the Login Page")
 	@Test
 	public void TC_01_ValidateLoginPage() throws InterruptedException {
@@ -21,6 +23,7 @@ public class LoginTests extends BaseTest{
 		Assert.assertEquals(loginPage.isPasswordInputExists(), true);
 	}
 	
+	@Description("Validate Login without any values been filled in the fields")
 	@Story("Validate Login without any values been filled in the fields")
 	@Test
 	public void TC_02_LoginWithoutAnyValuesInFields() throws InterruptedException {
@@ -32,6 +35,7 @@ public class LoginTests extends BaseTest{
 		Assert.assertEquals(loginPage.getErrorMessageTxt(), "Please enter both phone number and password.");
 	}
 	
+	@Description("Validate Login without one field empty and other having value")
 	@Story("Validate Login without one field empty and other having value")
 	@Test
 	public void TC_03_LoginWithOneFieldValueAndOtherAsEmpty() throws InterruptedException {
@@ -44,6 +48,7 @@ public class LoginTests extends BaseTest{
 	}
 	
 	
+	@Description("Validate the Successfull Login and Logout")
 	@Story("Validate the Successfull Login and Logout")
 	@Test
 	public void TC_04_SuccessfulLoginAndLogout() throws InterruptedException {
