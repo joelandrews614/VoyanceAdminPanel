@@ -9,7 +9,7 @@ import Utils.BaseTest;
 public class HomeTests extends BaseTest{
 	
 	@Test
-	public void validateSideNavbars() throws InterruptedException {
+	public void TC_01_ValidateSideNavbars() throws InterruptedException {
 	
 		dri.get(EnvironmentBaseURL);
 		

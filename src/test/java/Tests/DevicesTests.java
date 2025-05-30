@@ -15,7 +15,7 @@ public class DevicesTests extends BaseTest{
 		
 	}
 	
-	@Test(enabled = false)
+	@Test
 	public void TC_02_Verify_Add_Device_Details_Form() throws InterruptedException {
 				
 		devicesPage.clickAddNewButton();
