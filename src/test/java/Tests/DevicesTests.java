@@ -1,16 +1,22 @@
 package Tests;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Utils.BaseTest;
 
 public class DevicesTests extends BaseTest{
 	
+	@BeforeMethod
+	public void prerequiste() {
+
+		loginPage.login(phoneNumber, password);
+
+	}
+	
 	@Test
 	public void TC_01_Verify_The_Devices_Section() {
-		
-		loginPage.login(phoneNumber, password);
-		
+				
 		devicesPage.validateFields();
 		
 	}

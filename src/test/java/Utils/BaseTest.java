@@ -3,6 +3,8 @@ package Utils;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -10,7 +12,6 @@ import Pages.DevicesPage;
 import Pages.HeadersPage;
 import Pages.HomePage;
 import Pages.LoginPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
@@ -27,8 +28,14 @@ public class BaseTest {
 
 	@BeforeClass
 	public void setUp() {
-		dri = WebDriverManager.chromedriver().create();
-		dri.manage().window().maximize();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+		
+		dri = new ChromeDriver(options);
 		dri.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		dri.navigate().to(EnvironmentBaseURL);

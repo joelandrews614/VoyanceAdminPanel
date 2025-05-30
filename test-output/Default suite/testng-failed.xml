@@ -5,9 +5,9 @@
     <classes>
       <class name="Tests.DevicesTests">
         <methods>
-          <include name="TC_03_Verify_The_Paginations"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="TC_02_Verify_Add_Device_Details_Form"/>
         </methods>
       </class> <!-- Tests.DevicesTests -->
     </classes>
